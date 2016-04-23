@@ -1,0 +1,264 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.yourcare.CapturePrescriptionActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/app_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtSearchMore"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_shape"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="5dp"
+            android:hint="Search medicines and other products"
+            android:padding="5dp"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/specifyprescription"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:orientation="vertical"
+
+            android:visibility="gone"
+            android:padding="10dp">
+
+
+
+            <!-- To display picture taken -->
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutInformation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutInvoiceOrder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp"
+                    android:text="Just send the number which medicine"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="you dont want.(e.g:If you send 1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="then you dont want medecine name A)"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/layoutEnterCouponCode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/layoutIncludePage"
+                        android:layout_margin="15dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+
+                            <EditText
+                                android:id="@+id/txtPersonFullname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:hint="Enter Number"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/rounded_shape_edittext"
+                                android:inputType="text"
+
+                                android:layout_weight="1"
+                                android:singleLine="true" />
+
+                        <Button
+                            android:id="@+id/btnApplyCouponCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:background="@color/colorPrimary"
+                            android:text="Send"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txtnext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Next"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+
+            android:id="@+id/llcaptureprescription"
+            android:background="@drawable/layout_shape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="Capture Prescription"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="(Click Picture Of Your Prescription and Upload)"
+
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="#CCC"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:text="OR" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="#CCC" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+
+            android:id="@+id/llselectfromgallery"
+            android:background="@drawable/layout_shape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="Select a Photo From Gallery"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
